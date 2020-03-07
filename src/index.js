@@ -4,7 +4,7 @@ import './styles.css'
 Vue.use(VCalendar);
 
 new Vue({
-	el: '#nubeseo_booking_picker',
+	el: '#booking-picker',
 	data: () => {
 		return {
 			availableHosts: 9,
