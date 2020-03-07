@@ -1,0 +1,40 @@
+{
+  "name": "booking-selector",
+  "version": "1.0.0",
+  "description": "booking-selector",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "prod": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "start": "webpack-dev-server --mode development --hot --open",
+    "eslint": "eslint"
+  },
+  "author": "elacalle.eu",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-cypress": "^2.9.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "htmlhint": "^0.11.0",
+    "install": "^0.13.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.2"
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "v-calendar": "^1.0.0-beta.23",
+    "vue": "^2.6.11"
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Booking selector</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div id="nubeseo_booking_picker">
+		<form id="reserved-form-horizontal" method="POST" action="/">
+			<div class="book-form">
+				<div class="book-col-3">
+					<div class='book-picker'>
+						<i class="fa fa-calendar icon"></i>
+						<v-date-picker @dayclick='checkDates' :min-date='new Date()' v-model='startDate' />
+					</div>
+				</div>
+				<div class="book-col-3">
+					<div class='book-picker'>
+						<i class="fa fa-calendar icon"></i>
+						<v-date-picker :min-date='checkoutDate' v-model='endDate' />
+					</div>
+				</div>
+				<div class='book-col-2'>
+					<label class="sr-only" for="check_out_date">Huéspedes</label>
+					<select v-model='selectedHosts' class="form-control" name="room1-adults" id="adults" placeholder="Adultos">
+						<option v-for="i in availableHosts" :value="i">{{ i }} Huésped </option>
+					</select>
+				</div>
+				<div class="book-col-2">
+					<button class='book-button' @click='sendBooking' type="submit" class="btn"> Reservar Ahora</button>
+				</div>
+			</div>
+			<input type="hidden" name="f_ini" :value='formatStart'>
+			<input type="hidden" name="f_fin" :value='formatEnd'>
+			<input type="hidden" name="capacidad" :value='selectedHosts'>
+			<div v-if='haveError' class='book-error'>
+				<span>Por favor seleccione una fecha de entrada y salida.</span>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
